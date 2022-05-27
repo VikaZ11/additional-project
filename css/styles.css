@@ -4,10 +4,43 @@
   --main-title-color: #ffffff;
   --second-title-color: #303030;
   --accent: #ff6c00;
+  --typical-margin: 20px;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
+
+ul,
+ol {
+  margin: 0;
+  padding-left: 0;
+}
+
+button {
+  cursor: pointer;
+}
+
+img {
+  display: block;
 }
 
 body {
   font-family: "Open Sans", sans-serif;
+}
+
+.container {
+  width: 1200px;
+  margin: 0 auto;
+  padding-left: 15px;
+  padding-right: 15px;
+  outline: 1px solid red;
 }
 
 .list {
@@ -37,6 +70,7 @@ body {
   line-height: 1.36;
   letter-spacing: 0.1em;
   text-transform: uppercase;
+  margin-bottom: var(--typical-margin);
 }
 
 .title {
@@ -66,6 +100,8 @@ body {
 
 .header {
   background-color: grey;
+  padding-top: 32px;
+  padding-bottom: 32px;
 }
 
 .header-link,
@@ -110,6 +146,7 @@ body {
 
 .hero-content {
   background-color: #303030;
+  padding: 272px 96px 206px 96px;
 }
 
 .hero-top-text {
@@ -122,24 +159,34 @@ body {
   line-height: 1.18;
   letter-spacing: 0.05em;
   color: var(--main-title-color);
+  margin-bottom: var(--typical-margin);
 }
 
 .hero-bottom-text {
   color: #9da4bd;
+  max-width: 400px;
 }
 
 /* --------------------ABOUT------------------- */
 
+.about {
+  padding-top: 169px;
+  padding-bottom: 121px;
+}
+
 .about-top-text {
   color: #303030;
+  margin-bottom: var(--typical-margin);
 }
 
 .about-title {
   color: var(--second-title-color);
+  margin-bottom: var(--typical-margin);
 }
 
 .about-bottom-text {
   color: #555555;
+  margin-bottom: var(--typical-margin);
 }
 
 .about-text {
@@ -147,6 +194,7 @@ body {
   line-height: 1.86;
   letter-spacing: 0.02em;
   color: #555555;
+  margin-bottom: 40px;
 }
 
 .about-btn {
@@ -157,13 +205,26 @@ body {
 
 .prices {
   background-color: #303030;
+  padding-top: 130px;
+  padding-bottom: 130px;
 }
 .prices-top-text {
   color: rgba(157, 164, 189, 0.6);
+  margin-bottom: var(--typical-margin);
 }
 
 .prices-title {
   color: #ffffff;
+  margin-bottom: 44px;
+}
+
+.prices-list {
+  border: 1px dashed white;
+  padding: 30px 40px;
+}
+
+.prices-item {
+  margin-bottom: var(--typical-margin);
 }
 
 .prices-item-text {
@@ -175,9 +236,24 @@ body {
 
 .prices-btn {
   color: var(--main-btn-color);
+  display: block;
+  margin: 0 auto;
+  margin-top: 50px;
 }
 
 /* --------------------------BENEFITS--------------------------------------- */
+
+.benefits {
+  padding-top: 143px;
+  padding-bottom: 137px;
+}
+
+.benefits-item {
+  width: 170px;
+  height: 133px;
+  border: 1px solid black;
+  padding: 20px 24px;
+}
 
 .benefits-item-count {
   font-weight: 700;
@@ -186,6 +262,7 @@ body {
   text-align: center;
   letter-spacing: 0.05em;
   color: #303030;
+  display: block;
 }
 
 .benefits-item-text {
@@ -197,10 +274,12 @@ body {
 }
 
 .benefits-top-text {
+  margin-bottom: var(--typical-margin);
   color: #303030;
 }
 
 .benefits-title {
+  margin-bottom: var(--typical-margin);
   color: var(--second-title-color);
 }
 
@@ -210,12 +289,19 @@ body {
 
 /* --------------------------MASTERS--------------------------------------- */
 
+.masters {
+  padding-top: 130px;
+  padding-bottom: 130px;
+}
+
 .masters-top-text {
   color: #303030;
+  margin-bottom: var(--typical-margin);
 }
 
 .masters-title {
   color: var(--second-title-color);
+  margin-bottom: 44px;
 }
 
 .masters-item-title {
@@ -225,6 +311,8 @@ body {
   text-align: center;
   letter-spacing: 0.02em;
   color: #303030;
+  margin-bottom: 8px;
+  margin-top: 30px;
 }
 
 .masters-item-text {
@@ -237,14 +325,22 @@ body {
 
 /* --------------------------GALLERY--------------------------------------- */
 
+.gallery {
+  padding-top: 130px;
+  padding-bottom: 130px;
+}
+
 .gallery-top-text {
   color: #303030;
+  margin-bottom: 44px;
 }
 
 /* --------------------------ONLINE--------------------------------------- */
 
 .online {
   background-color: #303030;
+  padding-top: 130px;
+  padding-bottom: 193px;
 }
 
 .online-title {
@@ -255,14 +351,21 @@ body {
 
 .contacts {
   background-color: #303030;
+  padding-top: 130px;
+  padding-bottom: 130px;
 }
 
 .contacts-title {
   color: var(--main-title-color);
+  margin-bottom: 40px;
 }
 
 .contacts-address {
   font-style: normal;
+}
+
+.contacts-item {
+  margin-bottom: 20px;
 }
 
 .contacts-link {
@@ -279,6 +382,8 @@ body {
   letter-spacing: 0.1em;
   text-transform: uppercase;
   color: #ffffff;
+  margin-top: 70px;
+  margin-bottom: 20px;
 }
 
 .contacts-time {
@@ -292,6 +397,8 @@ body {
 
 .footer {
   background-color: #f7f7f7;
+  padding-bottom: 55px;
+  padding-top: 55px;
 }
 
 .footer-copy {

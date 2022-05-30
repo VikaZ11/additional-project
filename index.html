@@ -42,10 +42,12 @@
             </li>
           </ul>
         </nav>
-        <a class="header-tel link" href="tel:+380441111111"
-          >+38 044 111 11 11</a
-        >
-        <button type="button" class="header-btn btn">онлайн-запись</button>
+        <div class="header-connect">
+          <a class="header-tel link" href="tel:+380441111111"
+            >+38 044 111 11 11</a
+          >
+          <button type="button" class="header-btn btn">онлайн-запись</button>
+        </div>
       </div>
     </header>
 
@@ -86,7 +88,7 @@
       </section>
       <section id="about" class="about">
         <div class="container">
-          <ul class="list">
+          <ul class="about-list list">
             <li class="about-item">
               <img
                 src="./images/about-img-1.jpg"
@@ -102,20 +104,22 @@
               />
             </li>
           </ul>
-          <p class="about-top-text top-text">О нас</p>
-          <h2 class="about-title title">Лучший Барбершоп твоего города</h2>
-          <p class="about-bottom-text bottom-text">
-            Если ты хочешь добавить в свой образ больше уверенности – тебе точно
-            к нам.
-          </p>
-          <p class="about-text">
-            Мы команда, которая никогда не останавливается на достигнутом и
-            жаждет перемен. И когда ты попадешь в руки нашего мастера, то уже
-            никогда не сможешь быть прежним. Мы команда, которая всегда с
-            клиентами "на одной волне". Поэтому, мы всегда готовы
-            усовершенствовать каждого, кто к нам приходит!
-          </p>
-          <button type="button" class="about-btn btn">онлайн-запись</button>
+          <div class="about-content">
+            <p class="about-top-text top-text">О нас</p>
+            <h2 class="about-title title">Лучший Барбершоп твоего города</h2>
+            <p class="about-bottom-text bottom-text">
+              Если ты хочешь добавить в свой образ больше уверенности – тебе
+              точно к нам.
+            </p>
+            <p class="about-text">
+              Мы команда, которая никогда не останавливается на достигнутом и
+              жаждет перемен. И когда ты попадешь в руки нашего мастера, то уже
+              никогда не сможешь быть прежним. Мы команда, которая всегда с
+              клиентами "на одной волне". Поэтому, мы всегда готовы
+              усовершенствовать каждого, кто к нам приходит!
+            </p>
+            <button type="button" class="about-btn btn">онлайн-запись</button>
+          </div>
         </div>
       </section>
       <section id="price" class="prices">
@@ -124,42 +128,44 @@
             Проведи время в компании лучших мастеров
           </p>
           <h2 class="prices-title title">Услуги и цены</h2>
-          <ul class="list prices-list">
-            <li class="prices-item">
-              <p class="prices-item-text">Мужская стрижка</p>
-              <p class="prices-item-text">от 300 грн.</p>
-            </li>
-            <li class="prices-item">
-              <p class="prices-item-text">Стрижка бороды</p>
-              <p class="prices-item-text">от 200 грн.</p>
-            </li>
-            <li class="prices-item">
-              <p class="prices-item-text">Стрижка усов</p>
-              <p class="prices-item-text">от 200 грн.</p>
-            </li>
-            <li class="prices-item">
-              <p class="prices-item-text">Бритье опасной бритвой</p>
-              <p class="prices-item-text">от 200 грн.</p>
-            </li>
-          </ul>
-          <ul class="list prices-list">
-            <li class="prices-item">
-              <p class="prices-item-text">Cтрижка у стажера</p>
-              <p class="prices-item-text">от 50 грн.</p>
-            </li>
-            <li class="prices-item">
-              <p class="prices-item-text">Стрижка под насадку</p>
-              <p class="prices-item-text">от 200 грн.</p>
-            </li>
-            <li class="prices-item">
-              <p class="prices-item-text">Детская стрижка (до 12 лет)</p>
-              <p class="prices-item-text">от 300 грн.</p>
-            </li>
-            <li class="prices-item">
-              <p class="prices-item-text">Камуфлирование седины</p>
-              <p class="prices-item-text">от 200 грн.</p>
-            </li>
-          </ul>
+          <div class="prices-wrap">
+            <ul class="list prices-list">
+              <li class="prices-item">
+                <p class="prices-item-text">Мужская стрижка</p>
+                <p class="prices-item-text">от 300 грн.</p>
+              </li>
+              <li class="prices-item">
+                <p class="prices-item-text">Стрижка бороды</p>
+                <p class="prices-item-text">от 200 грн.</p>
+              </li>
+              <li class="prices-item">
+                <p class="prices-item-text">Стрижка усов</p>
+                <p class="prices-item-text">от 200 грн.</p>
+              </li>
+              <li class="prices-item">
+                <p class="prices-item-text">Бритье опасной бритвой</p>
+                <p class="prices-item-text">от 200 грн.</p>
+              </li>
+            </ul>
+            <ul class="list prices-list">
+              <li class="prices-item">
+                <p class="prices-item-text">Cтрижка у стажера</p>
+                <p class="prices-item-text">от 50 грн.</p>
+              </li>
+              <li class="prices-item">
+                <p class="prices-item-text">Стрижка под насадку</p>
+                <p class="prices-item-text">от 200 грн.</p>
+              </li>
+              <li class="prices-item">
+                <p class="prices-item-text">Детская стрижка (до 12 лет)</p>
+                <p class="prices-item-text">от 300 грн.</p>
+              </li>
+              <li class="prices-item">
+                <p class="prices-item-text">Камуфлирование седины</p>
+                <p class="prices-item-text">от 200 грн.</p>
+              </li>
+            </ul>
+          </div>
           <button type="button" class="prices-btn btn">онлайн-запись</button>
         </div>
       </section>

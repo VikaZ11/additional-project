@@ -1,0 +1,241 @@
+.backdrop {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(25, 28, 38, 0.392);
+  position: fixed;
+  top: 0;
+  transition: opacity 300ms, visibility 300ms;
+}
+
+.modal {
+  width: 500px;
+  min-height: 600px;
+  background-color: #ffffff;
+  border-radius: 5px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(1);
+  transition: transform 300ms;
+  padding: 40px;
+
+  .backdrop.is-hidden & {
+    transform: translate(-50%, -50%) scale(0);
+  }
+}
+
+.close-btn {
+  width: 30px;
+  height: 30px;
+  border: 1px solid #999999;
+  border-radius: 50%;
+  background-color: transparent;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  @extend %align-list;
+  justify-content: center;
+  padding: 0;
+}
+
+.is-hidden {
+  visibility: hidden;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.no-scroll {
+  overflow: hidden;
+}
+
+.modal__title {
+  text-align: center;
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+
+.modal__field {
+  margin-bottom: 10px;
+}
+
+.modal__input-wrap {
+  position: relative;
+}
+
+.modal__icon {
+  position: absolute;
+  left: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+
+  .modal__input:focus + & {
+    fill: var(--accent);
+  }
+}
+
+.modal__input {
+  width: 100%;
+  height: 45px;
+  border: 1px solid #999999;
+  border-radius: 5px;
+  padding-left: 42px;
+  outline: none;
+
+  &:focus {
+    border-color: var(--accent);
+  }
+
+  &:not(:placeholder-shown):not(:focus):valid {
+    background-color: rgba(0, 128, 0, 0.157);
+  }
+
+  &:not(:placeholder-shown):not(:focus):invalid {
+    background-color: rgba(255, 0, 0, 0.146);
+  }
+
+  &::placeholder {
+    color: #303030;
+    font-size: 12px;
+  }
+}
+
+/* .modal__input:not(:placeholder-shown) {
+  border-color: rgb(87, 95, 255);
+} */
+
+.modal__label {
+  font-size: 12px;
+  color: #9da4bd;
+  margin-bottom: 5px;
+  display: block;
+}
+
+.modal__text {
+  width: 100%;
+  height: 100px;
+  border: 1px solid #999999;
+  border-radius: 5px;
+  resize: none;
+}
+
+.modal__check-text {
+  color: #555555;
+  font-size: 14px;
+  @extend %align-list;
+  position: relative;
+}
+
+/* -----------------------------------Переключатель--------------------------- */
+
+/* .modal__check-text::before {
+  content: "";
+  width: 30px;
+  height: 30px;
+  border: 1px solid #999999;
+  border-radius: 50px;
+  margin-right: 5px;
+  transition: background-color 300ms linear;
+}
+
+.modal__check-text::after {
+  content: "";
+  position: absolute;
+  width: 8px;
+  height: 30px;
+  border-radius: 50px;
+  background-color: #9da4bd63;
+  left: 11px;
+  transform: rotate(-45deg);
+  transition: transform 300ms linear, background-color 300ms linear;
+}
+
+.modal__check:checked + .modal__check-text::after {
+  transform: rotate(45deg);
+  background-color: #ffffff;
+  border: 1px solid #999999;
+}
+
+.modal__check:checked + .modal__check-text::before {
+  background-color:#ff6a009c;
+}  */
+
+/* -------------------------------------Повзунок------------------------- */
+
+/* .modal__check-text::before {
+  content: "";
+  width: 40px;
+  height: 22px;
+  border: 1px solid #999999;
+  border-radius: 50px;
+  margin-right: 5px;
+  transition: background-color 300ms linear;
+}
+
+.modal__check-text::after {
+  content: "";
+  position: absolute;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background-color: #9da4bd63;
+  left: 3px;
+  transition: transform 300ms linear, background-color 300ms linear;
+}
+
+.modal__modal-check:checked + .modal__check-text::after {
+  transform: translate(16px);
+  background-color: #ffffff;
+}
+
+.modal__check:checked + .modal__check-text::before {
+  background-color:#ff6a009c;
+} */
+
+/* --------------------------------------Через спрайт----------------- */
+
+.modal__check-text span {
+  width: 16px;
+  height: 15px;
+  border: 2px solid #090b13;
+  border-radius: 3px;
+  margin-right: 5px;
+  @extend %align-list;
+  justify-content: center;
+}
+
+.modal__check-icon {
+  fill: transparent;
+}
+
+.modal__check:checked + .modal__check-text span {
+  background-color: var(--accent);
+  border: none;
+}
+
+.modal__check:checked + .modal__check-text .modal__check-icon {
+  fill: #ffffff;
+}
+
+/* ---------------------------------Через бефор---------------------- */
+
+/* .modal__check-text::before {
+  content: "";
+  width: 16px;
+  height: 15px;
+  border: 2px solid #090b13;
+  border-radius: 3px;
+  margin-right: 5px;
+}
+
+.modal__check:checked + .modal__check-text::before {
+  background-color: var(--accent);
+  background-image: url(../images/Vector-2.svg);
+  border: none;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.modal__check:focus + .modal__check-text::before {
+  border-color: var(--accent);
+} */

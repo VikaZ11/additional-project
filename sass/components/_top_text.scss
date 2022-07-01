@@ -1,12 +1,11 @@
 .top-text {
-  @include font(11px, 600, 1.36, 0.1em);
-  // font-weight: 600;
-  // font-size: 11px;
-  // line-height: 1.36;
-  // letter-spacing: 0.1em;
+  @include font(11px, 600, 1.91, 0.1em);
+  @media screen and (min-width: 768px) {
+    @include font(null, null, 1.36, null);
+  }
   text-transform: uppercase;
   @extend %align-list;
-  
+
   &--light {
     color: rgba(157, 164, 189, 0.6);
   }
@@ -22,5 +21,6 @@
     background-color: #555555;
     margin-right: 21px;
     background-color: currentColor;
+    flex-shrink: 0;
   }
 }

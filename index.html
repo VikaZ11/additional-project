@@ -18,7 +18,7 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
-    <link rel="stylesheet" href="./css/main.min.css">
+    <link rel="stylesheet" href="./css/main.min.css" />
   </head>
   <body>
     <header class="header">
@@ -51,6 +51,64 @@
           <button type="button" class="connect__btn btn" data-modal-open>
             онлайн-запись
           </button>
+        </div>
+        <button type="button" class="menu-open-btn">O</button>
+      </div>
+      <div class="mob-menu is-hidden">
+        <div class="container">
+          <div class="mob-menu-top">
+            <button type="button" class="menu-close-btn">X</button>
+            <ul class="mob-menu__list list">
+              <li class="mob-menu__item">
+                <a class="mob-menu__link link" href="#about">О нас</a>
+              </li>
+              <li class="mob-menu__item">
+                <a class="mob-menu__link link current" href="#price"
+                  >Услуги и цены</a
+                >
+              </li>
+              <li class="mob-menu__item">
+                <a class="mob-menu__link link" href="#masters">Мастера</a>
+              </li>
+              <li class="mob-menu__item">
+                <a class="mob-menu__link link" href="#contacts">Контакты</a>
+              </li>
+            </ul>
+          </div>
+          <div class="mob-menu-bottom">
+            <div class="mob-connect">
+              <a class="mob-connect__tel link" href="tel:+380441111111"
+                >+38 044 111 11 11</a
+              >
+              <button
+                type="button"
+                class="mob-connect__btn btn"
+                data-modal-open
+              >
+                онлайн-запись
+              </button>
+            </div>
+            <ul class="mob-soc-list list">
+              <li class="mob-soc-item">
+                <a
+                  href=""
+                  class="mob-soc-link link"
+                  target="_blank"
+                  rel="noopener nofollow noreferrer"
+                  >Instagram</a
+                >
+              </li>
+              <li class="mob-soc-item">
+                <a
+                  href=""
+                  class="mob-soc-link link"
+                  target="_blank"
+                  rel="noopener nofollow noreferrer"
+                  >Youtube</a
+                >
+              </li>
+            </ul>
+          </div>
         </div>
       </div>
     </header>
@@ -99,7 +157,7 @@
         </div>
       </section>
 
-      <section id="about" class="about">
+      <!-- <section id="about" class="about">
         <div class="container">
           <ul class="pic-list list">
             <li class="pic-list__item">
@@ -138,8 +196,8 @@
             </button>
           </div>
         </div>
-      </section>
-      <section id="price" class="prices">
+      </section> -->
+      <!-- <section id="price" class="prices">
         <div class="container">
           <p class="prices__top-text top-text top-text--light">
             Проведи время в компании лучших мастеров
@@ -185,8 +243,8 @@
           </div>
           <button type="button" class="prices__btn btn">онлайн-запись</button>
         </div>
-      </section>
-      <section class="benefits">
+      </section> -->
+      <!-- <section class="benefits">
         <div class="container">
           <div class="benefits__list-container">
             <ul class="list benefits-list">
@@ -221,7 +279,7 @@
             </p>
           </div>
         </div>
-      </section>
+      </section> -->
       <section id="masters" class="masters">
         <div class="container">
           <p class="masters__top-text top-text top-text--dark">
@@ -365,11 +423,34 @@
           <h2 class="visually-hidden">Галерея</h2>
           <ul class="list gallery__list">
             <li class="gallery__item">
-              <img
-                src="./images/Rectangle25-2.jpg"
-                alt="Барбер делает стрижку"
-                width="270"
-              />
+              <picture>
+                <source
+                  srcset="
+                    ./images/Rectangle25-2.jpg   1x,
+                    ./images/gallery-img1-2x.jpg 2x
+                  "
+                  media="(min-width: 1200px)"
+                />
+                <source
+                  srcset="
+                    ./images/gallery-img1-tab-1x.jpg 1x,
+                    ./images/gallery-img1-tab-2x.jpg 2x
+                  "
+                  media="(min-width: 768px)"
+                />
+                <source
+                  srcset="
+                    ./images/gallery-img1-mob-1x.jpg 1x,
+                    ./images/gallery-img1-mob-2x.jpg 2x
+                  "
+                  media="(min-width: 320px)"
+                />
+                <img
+                  src="/images/gallery-img1-mob-1x.jpg"
+                  alt="Барбер делает стрижку"
+                  width="418"
+                />
+              </picture>
             </li>
             <li class="gallery__item">
               <img
@@ -395,7 +476,7 @@
           </ul>
         </div>
       </section>
-      <div class="contact-wrap">
+      <!-- <div class="contact-wrap">
         <div class="container">
           <section class="online">
             <h2 class="online__title title title--light">Онлайн-запись</h2>
@@ -461,10 +542,10 @@
             <p class="contacts__time">Ежедневно с 9:00 до 22:00</p>
           </section>
         </div>
-      </div>
+      </div> -->
     </main>
 
-    <footer class="footer">
+    <!-- <footer class="footer">
       <div class="container">
         <p class="footer__copy">&copy; Copyright 2020</p>
         <ul class="footer__list list">
@@ -488,7 +569,7 @@
           </li>
         </ul>
       </div>
-    </footer>
+    </footer> -->
     <div class="backdrop is-hidden" data-modal>
       <div class="modal">
         <button type="button" class="close-btn" data-modal-close>
@@ -594,5 +675,6 @@
       </div>
     </div>
     <script src="./js/modal.js"></script>
+    <script src="./js/menu.js"></script>
   </body>
 </html>

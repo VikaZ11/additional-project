@@ -1,28 +1,58 @@
 .benefits {
-  padding-top: 143px;
-  padding-bottom: 137px;
+  padding-top: 84px;
+  padding-bottom: 84px;
+  @include tablet {
+    padding-top: 100px;
+    padding-bottom: 100px;
+  }
+  @include desktop {
+    padding-top: 157px;
+    padding-bottom: 123px;
+  }
   & .container {
     display: flex;
+    flex-direction: column-reverse;
+    @include desktop {
+      flex-direction: row;
+      justify-content: space-around;
+    }
   }
 }
 
 .benefits__list-container {
-  padding-top: 157px;
-  padding-left: 125px;
-  padding-bottom: 108px;
-  margin-right: 130px;
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
+    margin-left: auto;
+  }
 }
 
 .benefits__text-container {
-  padding-top: 168px;
-  padding-right: 100px;
+  @include tablet {
+    width: 500px;
+  }
+  @include desktop {
+    margin-top: 9px;
+  }
 }
 
 .benefits-list__item {
-  width: 170px;
+  width: 193px;
   height: 133px;
+  @include tablet {
+    width: 210px;
+    height: 133px;
+  }
+  @include desktop {
+    width: 170px;
+    height: 133px;
+  }
   background-color: #f7f7f7;
-  padding: 20px 24px;
+  padding: 20px 34px;
+  @include tablet {
+    padding: 20px 40px;
+  }
+  @include desktop {
+    padding: 20px 24px;
+  }
   &:nth-child(odd) {
     margin-right: 30px;
   }
@@ -32,7 +62,13 @@
 }
 
 .benefits-list {
-  width: 370px;
+  max-width: 418px;
+  @include tablet {
+    max-width: 450px;
+  }
+  @include desktop {
+    max-width: 370px;
+  }
   display: flex;
   flex-wrap: wrap;
 }
@@ -70,8 +106,13 @@
 
 .benefits__title {
   margin-bottom: var(--typical-margin);
+  font-size: 42px;
+  line-height: 1.17;
 }
 
 .benefits__bottom-text {
   color: #555555;
+  font-size: 18px;
+  line-height: 1.67;
+  margin-bottom: 44px;
 }

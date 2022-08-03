@@ -1,7 +1,19 @@
 .footer {
   background-color: #f7f7f7;
-  padding-bottom: 55px;
+  padding-bottom: 44px;
+  padding-top: 44px;
+  @include tablet {
+    padding-bottom: 55px;
   padding-top: 55px;
+  }
+}
+
+.footer-wrap {
+  display: flex;
+  flex-direction: column-reverse;
+  @include tablet {
+    flex-direction: row;
+  }
 }
 
 .footer__copy {
@@ -12,12 +24,23 @@
   color: #9da4bd;
 }
 
+.footer__list {
+  margin-left: auto;
+}
+
+.footer__item {
+  &:not(:last-child) {
+    margin-right: 40px;
+  }
+}
+
 .footer__link {
   font-weight: 600;
   font-size: 11px;
   line-height: 1.36;
   letter-spacing: 0.2em;
   color: #303030;
+  text-transform: none;
   &:hover,
   &:focus {
     color: var(--accent);

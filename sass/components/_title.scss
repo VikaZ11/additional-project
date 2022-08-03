@@ -1,8 +1,8 @@
 .title {
   font-family: "Raleway", sans-serif;
   font-weight: 700;
-  font-size: 42px;
-  line-height: 1.16;
+  font-size: 28px;
+  line-height: 1.18;
   letter-spacing: 0.05em;
   &--light {
     color: var(--main-title-color);
@@ -11,4 +11,5 @@
   &-dark {
     color: var(--second-title-color);
   }
+  
 }
